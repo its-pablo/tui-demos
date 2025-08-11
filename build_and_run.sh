@@ -7,4 +7,4 @@ SCRIPT_DIR=$(dirname "$(realpath "$0")")
 bash -c "$SCRIPT_DIR/build.sh"
 
 # Run the project passing any arguments
-$SCRIPT_DIR/build/gardener "$@"
+$SCRIPT_DIR/build/demos "$@"

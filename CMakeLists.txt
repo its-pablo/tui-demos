@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(Gardener
+project(demos
     LANGUAGES CXX
     VERSION 0.0.1
     DESCRIPTION "Remote gardening tool for my dad!"
@@ -18,8 +18,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #endif()
 
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cc)
-add_executable(gardener ${SOURCES})
-target_include_directories(gardener PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/devices)
+add_executable(demos ${SOURCES})
+target_include_directories(demos PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/devices)
 
 include(FetchContent)
 
@@ -32,7 +32,7 @@ FetchContent_Declare(
     EXCLUDE_FROM_ALL
 )
 FetchContent_MakeAvailable(tomlplusplus)
-target_link_libraries(gardener tomlplusplus::tomlplusplus)
+target_link_libraries(demos tomlplusplus::tomlplusplus)
 
 FetchContent_Declare(
     cxxopts
@@ -43,7 +43,7 @@ FetchContent_Declare(
     EXCLUDE_FROM_ALL
 )
 FetchContent_MakeAvailable(cxxopts)
-target_link_libraries(gardener cxxopts::cxxopts)
+target_link_libraries(demos cxxopts::cxxopts)
 
 FetchContent_Declare(
     ftxui
@@ -54,7 +54,7 @@ FetchContent_Declare(
     EXCLUDE_FROM_ALL
 )
 FetchContent_MakeAvailable(ftxui)
-target_link_libraries(gardener
+target_link_libraries(demos
     ftxui::screen
     ftxui::dom
     ftxui::component

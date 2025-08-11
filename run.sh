@@ -4,4 +4,4 @@
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 
 # Run the project passing any arguments
-$SCRIPT_DIR/build/gardener "$@"
+$SCRIPT_DIR/build/demos "$@"
