@@ -736,7 +736,7 @@ int main(int argc, char *argv[]) {
     cxxopts::Options options("C++ tests!",
                              "A simple command line tool I can add a bunch of "
                              "simple examples to as I learn more about C++.");
-    options.add_options()("h,hello", "Hello World!", cxxopts::value<bool>())(
+    options.add_options()("w,world", "Hello World!", cxxopts::value<bool>())(
         "t,toml", "TOML parse example, takes TOML file path as input.",
         cxxopts::value<std::string>())("d,devices",
                                        "Parse a device config TOML file.",
@@ -749,7 +749,7 @@ int main(int argc, char *argv[]) {
     int ret = 0;
 
     // Handle hello world option
-    if (result.count("hello") > 0) {
+    if (result.count("world") > 0) {
         hello_world();
     }
 
