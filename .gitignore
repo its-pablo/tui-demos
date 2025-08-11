@@ -1,0 +1,9 @@
+# Ignore build artifacts
+build
+debug
+
+# Ignore VS Code config files
+.vscode
+
+# Ignore formatting config
+.clang-format

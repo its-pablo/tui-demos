@@ -1,0 +1,103 @@
+[Devices]
+description = "This TOML describes the devices in my garden."
+
+[[Devices.Digital.In]]
+name = "depth-sensor-0"
+pin = 0
+is_active_low = false
+
+[[Devices.Digital.In]]
+name = "depth-sensor-1"
+pin = 1
+is_active_low = false
+
+[[Devices.Digital.InOut]]
+name = "pump-switch-0"
+pin = 4
+is_active_low = false
+
+[[Devices.Digital.InOut]]
+name = "solenoid-valve-0"
+pin = 5
+is_active_low = true
+
+[[Devices.Analog.In]]
+name = "moisture-sensor-0"
+pin = 2
+units = "Percent,%"
+abs_min = 0x0000_0000
+abs_max = 0x0000_FFFF
+rel_min = 0.0
+rel_max = 100.0
+[[Devices.Analog.In.Warnings]]
+min = 0.0
+max = 5.0
+[[Devices.Analog.In.Warnings]]
+min = 95.0
+max = 100.0
+[[Devices.Analog.In.Cautions]]
+min = 5.0
+max = 15.0
+[[Devices.Analog.In.Cautions]]
+min = 85.0
+max = 95.0
+[[Devices.Analog.In.Optimals]]
+min = 47.0
+max = 53.0
+
+[[Devices.Analog.In]]
+name = "moisture-sensor-1"
+pin = 3
+units = "Percent,%"
+abs_min = 0x0000_0000
+abs_max = 0x00FF_FFFF
+rel_min = 0.0
+rel_max = 100.0
+[[Devices.Analog.In.Warnings]]
+min = 0.0
+max = 5.0
+[[Devices.Analog.In.Warnings]]
+min = 95.0
+max = 100.0
+[[Devices.Analog.In.Cautions]]
+min = 5.0
+max = 15.0
+[[Devices.Analog.In.Cautions]]
+min = 85.0
+max = 95.0
+[[Devices.Analog.In.Optimals]]
+min = 47.0
+max = 53.0
+
+[[Devices.Analog.In]]
+name = "solar-sensor-0"
+pin = 7
+units = "Volts,V"
+abs_min = 0x0000_0000
+abs_max = 0x0000_FFFF
+rel_min = 0.0
+rel_max = 24.0
+[[Devices.Analog.In.Warnings]]
+min = 0.0
+max = 2.0
+[[Devices.Analog.In.Cautions]]
+min = 2.0
+max = 6.0
+[[Devices.Analog.In.Optimals]]
+min = 20.0
+max = 24.0
+
+[[Devices.Analog.InOut]]
+name = "volume-controller-0"
+pin = 6
+units = "Decibells,dB"
+abs_min = 0x0000_0000
+abs_max = 0x0000_FFFF
+rel_min = 40.0
+rel_max = 105.0
+[[Devices.Analog.InOut.Cautions]]
+min = 85.0
+max = 90.0
+[[Devices.Analog.InOut.Warnings]]
+min = 90.0
+max = 105.0
