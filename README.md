@@ -4,7 +4,7 @@ Not much here yet. This is just a collection of tech demos as I figure out what 
 
 Top of my head, some prereqs are `cmake`, `git`, and `gcc`/`g++`. So far I've had success running this just fine on Ubuntu and WSL.
 
-There's some convenience bash scripts you can use to build and run. Namely: `build.sh`, `run.sh`, `build_and_run.sh`, and `clean.sh`.
+There's some convenience bash scripts you can use to build and run. Namely: `build.sh`, `run.sh`, `build_and_run.sh`, and `clean.sh`. Here is an example of how to run the main UI demo: `./build_and_run.sh -u test_files/garden_config.demo`.
 
 If you're using VS Code and want to make changes or run the debugger, you'll likely want something along the following in your `.vscode` project config:
 
