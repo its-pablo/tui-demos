@@ -347,8 +347,15 @@ void Devices::UI::run(std::vector<std::unique_ptr<Devices::Device>> &devices) {
             }
         }
     });
+    auto catch_exit = ftxui::CatchEvent([&](Event event) {
+        if (event == Event::Character('q')) {
+            screen.ExitLoopClosure()();
+            return true;
+        }
+        return false;
+    });
     MainView main_view(devices, hist_lock);
-    screen.Loop(main_view.get_renderer());
+    screen.Loop(main_view.get_renderer() | catch_exit);
     run = false;
     refresh_ui.join();
     update_values.join();
